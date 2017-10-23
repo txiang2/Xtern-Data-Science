@@ -1,0 +1,70 @@
+Based on the data, there are 19 approximate locations that are frequently visited. These approximate locations are centered at the coordinates: 
+
+x            y
+(0.90127691 ,  0.79737293), with 1313 visits over ~14 weeks,
+(-0.08194894, -0.08620216), with 1367 visits over ~14 weeks,
+(1.16451548 ,  1.32698148), with  914 visits over ~14 weeks,
+(0.22556029 ,  0.13144752), with 2205 visits over ~14 weeks,
+(0.75460606 ,  0.58496642), with 1461 visits over ~14 weeks,
+(0.40497401 ,  0.06186446), with 1558 visits over ~14 weeks,
+(1.34128524 ,  0.87740053), with 1517 visits over ~14 weeks,
+(-0.12144009,  0.3275148 ), with  971 visits over ~14 weeks,
+(0.94116602 ,  0.89752275), with 1219 visits over ~14 weeks,
+(0.37035595 , -0.12870261), with 1219 visits over ~14 weeks,
+(-0.16072998, -0.22126277), with  988 visits over ~14 weeks,
+(0.2179461  , -0.04084292), with 1602 visits over ~14 weeks,
+(0.60229604 ,  1.02937116), with 1115 visits over ~14 weeks,
+(0.24934742 , -0.25020894), with 1334 visits over ~14 weeks,
+(0.84164082 ,  1.16237725), with 1491 visits over ~14 weeks,
+(0.97299631 ,  0.73286055), with 1540 visits over ~14 weeks,
+(-0.26257763,  0.02409033), with 1333 visits over ~14 weeks,
+(-0.14856268,  0.04881133), with 1154 visits over ~14 weeks,
+(0.95818464 ,  1.29571618), with 1366 visits over ~14 weeks
+
+It seems that the locations visited most oftem by users are located in the region bounded by the x coordinates (.1, .5) and the y coordinates (-.4, .4)
+
+Given the approximate number of visits per week, the following coordinates had absolute value correlation coefficients greater than .5:
+
+[ 0.22556029  0.13144752], [-0.26257763  0.02409033], r = 0.743383089031
+[ 0.94116602  0.89752275], [ 0.60229604  1.02937116], r = -0.666007904675
+[ 0.90127691  0.79737293], [ 0.2179461  -0.04084292], r = -0.634289944699
+[ 0.90127691  0.79737293], [ 0.22556029  0.13144752], r = -0.620984461403
+[ 0.75460606  0.58496642], [ 1.34128524  0.87740053], r = -0.619268816694
+[ 0.84164082  1.16237725], [ 0.97299631  0.73286055], r = -0.598719272919
+[ 0.37035595 -0.12870261], [-0.16072998 -0.22126277], r = -0.592368643163
+[ 1.16451548  1.32698148], [-0.26257763  0.02409033], r = 0.565143065203
+[ 1.16451548  1.32698148], [ 0.97299631  0.73286055], r = 0.551282266679
+[-0.08194894 -0.08620216], [ 0.84164082  1.16237725], r = 0.53965034013
+[ 0.90127691  0.79737293], [-0.26257763  0.02409033], r = -0.528019115843
+[ 0.37035595 -0.12870261], [ 0.95818464  1.29571618], r = -0.522293815631
+[-0.08194894 -0.08620216], [ 0.95818464  1.29571618], r = -0.521985182252
+[-0.08194894 -0.08620216], [ 0.97299631  0.73286055], r = -0.501431964178
+[ 0.22556029  0.13144752], [ 0.2179461  -0.04084292], r = 0.500557064157
+
+The higher the correlation coeffient, if one coordinate was highly visited in a week, then the other coordinate is more likely to also be highly visited that week.
+
+In reguards to the times of day during which people visit the coordinates:
+
+ [ 0.90127691  0.79737293] : Busiest 03:00 and 05:00
+ [-0.08194894 -0.08620216] : Visiting rates more conistant between 12:00 and 24:00
+ [ 1.16451548  1.32698148] : Visiting rates trend downwards throughout the day
+ [ 0.22556029  0.13144752] : Busiest between 05:00 and 08:00
+ [ 0.75460606  0.58496642] : Busiest between 08:00 and 11:00
+ [ 0.40497401  0.06186446] : Busiest between 00:00 and 08:00
+ [ 1.34128524  0.87740053] : Busiest between 18:00 and 22:00
+ [-0.12144009  0.3275148 ] : Visitor peaks at around 13:00 and between 18:00 and 22:00
+ [ 0.94116602  0.89752275] : BUsiest between 11:00 and 21:00
+ [ 0.37035595 -0.12870261] : Dips in visiting rates at around 08:00 and 15:00
+ [-0.16072998 -0.22126277] : Visiting rates rise untill roun 12:00, then start to fall
+ [ 0.2179461  -0.04084292] : Busiest around midnight
+ [ 0.60229604  1.02937116] : Visiting rates steadily rise between 18:00 and 22:00, reaching a spike at around 23:00
+ [ 0.24934742 -0.25020894] : Visiting rates trend upwards throughout the day
+ [ 0.84164082  1.16237725] : Busiest around noon
+ [ 0.97299631  0.73286055] : Mostly constant visiting rates throughout the day
+ [-0.26257763  0.02409033] : Lower visiting rates between 06:00 and 16:00
+ [-0.14856268  0.04881133] : Dip in visiting rates around noon
+ [ 0.95818464  1.29571618] : Peak between 06:00 and 10:00
+ 
+ If I was to investigate further, I would look at the relating between the day of the week and visiting rates.
+ 
+ I would also attempt to draw conclusions from the user visiting patterns (the order in which they visit locations)
